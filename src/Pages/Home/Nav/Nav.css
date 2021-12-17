@@ -1,0 +1,29 @@
+body{
+    font-family: 'Kanit', sans-serif;
+font-family: 'Poppins', sans-serif;
+background-color: black;
+color: white;
+}
+.dash{
+    text-decoration: none;
+    color: black;
+}
+/* .fas{
+    margin-right: 50px;
+    background-color: orange;
+    padding: 6px 12px;
+    border-radius: 50px;
+    color: white;
+} */
+.half-width{
+    display: flex;
+    margin-right: 50px;
+    background-color: orange;
+    padding: 6px 12px;
+    border-radius: 50px;
+    color: white;
+    /* background-color: orange; */
+}
+.cart{
+    text-decoration: none;
+}

@@ -1,0 +1,20 @@
+[
+    {
+      "img": "https://i.ibb.co/zFJwqxW/sweet2.jpg",
+      "name": "Doughlicious",
+      "price": "$9.99",
+      "description": "Belgian chocolate glazed donuts covered in icing with sprinkles on top"
+    },
+    {
+      "img": "https://i.ibb.co/qmmSZts/sweet3.jpg",
+      "name": "Caramel WOnder",
+      "price": "$12.99",
+      "description": "Vanila ice cream covered with caramel and chocolate glaze topped with a coco stick"
+    },
+    {
+      "name": "Chocolate Ice Cream",
+      "img": "https://i.ibb.co/ZgtqGp4/sweet-1.jpg",
+      "price": "$9.99",
+      "description": "Double fudge brownie squares topped with white chocolate pieces and macadamia nuts"
+    }
+  ]
