@@ -1,0 +1,19 @@
+.fab{
+    margin-left: 700px;
+    margin-top: 50px;
+}
+.google{
+    margin-left: 650px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width:688px) and (max-width:991px)
+{
+    .log{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        justify-items: center;
+    }
+
+}

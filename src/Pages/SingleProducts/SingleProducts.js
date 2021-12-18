@@ -10,7 +10,7 @@ const SingleProducts = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${params._id}`)
+        fetch(`http://localhost:5000/services/product/${params._id}`)
         .then(res => res.json())
         .then(product => {
             // setProduct(product);

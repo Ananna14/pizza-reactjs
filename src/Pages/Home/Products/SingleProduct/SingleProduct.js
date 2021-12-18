@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 import './SingleProduct.css'
 
 const SingleProduct = ({product}) => {
+
     const {img, name, description, price} =product;
+
+    const addToCart = (event) =>{
+        console.log(event);
+    }
     return (
 
 <Link to={`/products/${product._id}`} className='card-design mt-5 rounded col-lg-4 col-md-6 col-12'>
@@ -22,7 +27,7 @@ const SingleProduct = ({product}) => {
               <span className='bg'>Large</span><br/>
            <div className='card-item mt-3'>
              <span>{price}</span>
-             <button className='add-btn fw-bold'>ADD</button>
+             <button onClick={{ addToCart }} className='add-btn fw-bold'>ADD</button>
            </div>
       </Card.Body>
   </Card>

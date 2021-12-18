@@ -21,9 +21,13 @@ color: white;
     background-color: orange;
     padding: 6px 12px;
     border-radius: 50px;
+    text-decoration: none;
     color: white;
     /* background-color: orange; */
 }
 .cart{
+    text-decoration: none;
+}
+.gap{
     text-decoration: none;
 }

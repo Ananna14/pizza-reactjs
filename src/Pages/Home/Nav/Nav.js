@@ -44,14 +44,15 @@ const Nav = () => {
   {/* font-awesome */}
   <Link to="/cart">
     <div className='half-width'>
-       <div className='mx-1 gap'>
-          <span>10</span>
+       <div className='mx-1'>
+          <span className='gap'>10</span>
        </div>
        <div>
          <span><i class="fas fa-shopping-cart"></i></span>
        </div>
     </div>
   </Link>
+  <Link className='half-width' to="/login">login</Link>
 </nav>
 
         </div>

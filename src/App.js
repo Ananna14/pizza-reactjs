@@ -19,6 +19,7 @@ import Cart from './Pages/Cart/Cart';
 import Footer from './Pages/Footer/Footer';
 import { CartContext } from './Pages/Cart/CartContext/CartContext';
 import { useEffect, useState } from 'react';
+import Login from './Pages/Login/Login';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <Route path="admin" element={<Admin />} />
       <Route path="add" element={<AddProduct />} />
       <Route path="cart" element={<Cart />} />
+      <Route path="login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
       </Routes>
      {/* </CartContext.Provider> */}
