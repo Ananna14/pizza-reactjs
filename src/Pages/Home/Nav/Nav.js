@@ -1,13 +1,17 @@
-import React from 'react'
+
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../Cart/CartContext/CartContext'
+
 import './Nav.css'
 
 const Nav = () => {
+
+  // const { cart } = useContext(CartContext);
     return (
         <div>
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    {/* <a class="navbar-brand" href="#">Navbar</a> */}
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,15 +20,11 @@ const Nav = () => {
         <li class="nav-item">
           <Link to="/home" class="nav-link" href="#">Home</Link>
         </li>
-        {/* <li class="nav-item">
-          <Link to="/about" class="nav-link" href="#">About</Link>
-        </li> */}
+ 
         <li class="nav-item">
           <Link to="/products" class="nav-link" href="#">Products</Link>
         </li>
         <li class="nav-item">
-          {/* offcanvus */}
-          {/* <Link to="/dashbord" class="nav-link" href="#">Dashbord</Link> */}
           <Link to="/dashbord" class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Dashbord</Link>
           <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
@@ -44,15 +44,11 @@ const Nav = () => {
   {/* font-awesome */}
   <Link to="/cart">
     <div className='half-width'>
-       <div className='mx-1'>
-          <span className='gap'>10</span>
-       </div>
-       <div>
+          {/* <span className='gap'>{cart.totalItems}</span> */}
          <span><i class="fas fa-shopping-cart"></i></span>
-       </div>
     </div>
   </Link>
-  <Link className='half-width' to="/login">login</Link>
+  {/* <Link className='half-width' to="/login">login</Link> */}
 </nav>
 
         </div>

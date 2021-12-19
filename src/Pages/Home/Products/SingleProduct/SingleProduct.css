@@ -20,6 +20,9 @@ padding: 3px 10px;
     border-radius: 16px;
     padding: 3px 10px;
 }
+.add-btn:hover{
+background-color: lightblue;
+}
 .card-img{
     width: 100%;
 }

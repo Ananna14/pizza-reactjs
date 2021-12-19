@@ -3,14 +3,13 @@ import initializeAppAuthentication from './Firebase.init'
 import { GoogleAuthProvider, signInWithPopup, getAuth, onAuthStateChanged, signOut  } from "firebase/auth";
 
 initializeAppAuthentication()
-
 const UseFirebase=()=>{
     const [user, setUser] = useState({})
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-    const signInUsingGoogle=()=>{
+    const signInWithGoogle=()=>{
         return signInWithPopup(auth, googleProvider)
     }
     const logOut=()=>{
@@ -28,7 +27,7 @@ const UseFirebase=()=>{
     }, [])
     return{
         user,
-        signInUsingGoogle,
+        signInWithGoogle,
         logOut
     }
 }

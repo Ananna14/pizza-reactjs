@@ -1,8 +1,6 @@
 import { createContext } from "react"
 import UseFirebase from "./UseFirebase"
 
-
-
 export const AuthContext=createContext()
 
 const AuthProvider = ({children}) => {

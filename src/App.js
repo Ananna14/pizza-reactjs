@@ -11,7 +11,6 @@ import Products from './Pages/Home/Products/Products';
 import NotFound from './Pages/Home/NotFound/NotFound';
 import Dashbord from './Pages/Home/Dashbord/Dashbord';
 import Nav from './Pages/Home/Nav/Nav';
-import HomeText from './Pages/Home/HomeText';
 import Admin from './Pages/Admin/Admin';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import SingleProducts from './Pages/SingleProducts/SingleProducts';
@@ -28,28 +27,33 @@ function App() {
   // Fetch from local storage
   useEffect(()=>{
     const cart =  window.localStorage.getItem('cart');
+    setCart(JSON.parse(cart))
+    // console.log(JSON.parse(cart));
 
   }, [])
+
+  useEffect(()=>{
+    window.localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart])
 
   return (
     <BrowserRouter>
      <Nav></Nav>
 
-     {/* <CartContext.Provider value={}> */}
+     <CartContext.Provider value={{ cart, setCart }}>
      <Routes>
      <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="products" exact element={<Products />} />
-      <Route path="products/:_id" exact element={<SingleProducts />} />
-      {/* <Route path="products" element={<Cover/>} /> */}
+      <Route path="products/:_id" element={<SingleProducts />} />
       <Route path="dashbord" element={<Dashbord />} />
-      <Route path="admin" element={<Admin />} />
+      {/* <Route path="admin" element={<Admin />} /> */}
       <Route path="add" element={<AddProduct />} />
       <Route path="cart" element={<Cart />} />
       <Route path="login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
       </Routes>
-     {/* </CartContext.Provider> */}
+     </CartContext.Provider>
  
     <Footer/>
   </BrowserRouter>

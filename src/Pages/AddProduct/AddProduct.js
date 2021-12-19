@@ -5,22 +5,11 @@ import AddProductService from './AddProductService';
 
 const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
-    // sweet-form
-    // const handelOnService = data => {
-    //     axios.post('http://localhost:5000/services', data)
-    //     .then(res =>{
-    //         if(res.data.insertedId){
-    //             alert('added sussessfully');
-    //             reset();
-    //         }
-    //         console.log(data)
-    //     })
-       
-    // };
+   
     // sweet-form
     const onSweet = data => {
         console.log(data)
-        axios.post('http://localhost:5000/sweets', data)
+        axios.post('https://powerful-brushlands-31626.herokuapp.com/sweets', data)
         .then(res =>{
             if(res.data.insertedId){
                 alert('added sussessfully');

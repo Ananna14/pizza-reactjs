@@ -1,22 +1,23 @@
 import { getAuth } from 'firebase/auth';
-import React from 'react'
+import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../UseFirebase/UseAuth';
-import './Login.css'
+import './Login.css';  
 
 
 const Login = () => {
-    const auth = getAuth();
-    const history= useNavigate();
-    
-    const location = useLocation();
-    const redirect_uri = location.state?.from || '/home';
-    const{signInUsingGoogle} = useAuth();
+    const{signInWithGoogle} = useAuth();
 
+    const location = useLocation();
+    const navigate= useNavigate();
+
+    const redirect_uri = location.state?.from || '/home';
+  
     const handelGoogleLogin=()=>{
-        signInUsingGoogle()
+        // signInWithGoogle(location, navigate)
+        signInWithGoogle()
         .then(result=>{
-            history.pushState(redirect_uri)
+            navigate.push(redirect_uri)
         })
     }
     return (
