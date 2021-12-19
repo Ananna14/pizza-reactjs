@@ -28,7 +28,7 @@ const Nav = () => {
           <Link to="/dashbord" class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Dashbord</Link>
           <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
-    <Link to="/admin" class="dash">Admin</Link><br/><br/>
+    {/* <Link to="/admin" class="dash">Admin</Link><br/><br/> */}
    
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
